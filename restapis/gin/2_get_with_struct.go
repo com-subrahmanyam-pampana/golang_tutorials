@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -20,8 +19,7 @@ func getUsers(ginContext *gin.Context) {
 	ginContext.JSON(http.StatusOK, users)
 }
 
-func main() {
-	fmt.Println("Main called")
+func getWithStruct() {
 	router := gin.Default()
 	router.GET("/users", getUsers)
 	router.Run("localhost:9091")
